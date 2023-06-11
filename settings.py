@@ -1,5 +1,8 @@
 """There you can find and change all the project settings"""
-GAME_NAME = "HarryPotter adventures"
+import pygame
+
+GAME_TITLE = "Harry Potter : The Adventures"
+GAME_ICON_PATH = "img/icon.png"
 WIN_HEIGHT = 920
 WIN_WIDTH = 1640
 FPS = 60

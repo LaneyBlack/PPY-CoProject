@@ -14,7 +14,7 @@ def debug(info, y=10, x=10):
         Y Coordinate of the infobox (default = 10)
     :param x: int
         X Coordinate of the infobox (default = 10)
-    :return:
+    :return: None
     """
     display_surface = pygame.display.get_surface()
     debug_info = font.render(str(info), True, DEBUG_FONT_COLOR)

@@ -10,15 +10,21 @@ class Game:
         self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
         # Frame timespans
         self.clock = pygame.time.Clock()
+        # Window Title
+        pygame.display.set_caption(GAME_TITLE)
+        # Window Icon
+        pygame.display.set_icon(pygame.image.load(GAME_ICON_PATH))
+
 
     def run(self):
         """
         Repeats every frame
-        :return:
+        if event type == QUIT, then exit game
+        :return: None
         """
         while True:
             for event in pygame.event.get():
-                if event == pygame.QUIT:
+                if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
             self.screen.fill("black")

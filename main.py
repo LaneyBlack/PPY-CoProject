@@ -1,18 +1,41 @@
-import pygame
-from config import *
-#Great
-# there will be main
+import sys, pygame
+from settings import *
+from debug import debug
+
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode((window_width, window_height))
+        # Initialise Screen size
+        self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
+        # Frame timespans
         self.clock = pygame.time.Clock()
-        self.running = True
+
+    def run(self):
+        """
+        Repeats every frame
+        :return:
+        """
+        while True:
+            for event in pygame.event.get():
+                if event == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+            self.screen.fill("black")
+            debug("Hello World")
+            pygame.display.update()
+            self.clock.tick(FPS)
+
+
 
 def main():
+    """
+    This is main method of the project.
+    Here the game object is created and runned.
+    :return:
+    """
     game = Game()
-
+    game.run()
 
 if __name__ == "__main__":
     main()

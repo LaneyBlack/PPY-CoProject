@@ -1,0 +1,15 @@
+PLAN:
+
+Anton
+- setup
+- Animations
+- Weapons
+- Enemy creating
+- Enemy interaction
+
+Palina
+- creating the player
+- UI
+- Graphics
+- Magic Setup
+- Spells

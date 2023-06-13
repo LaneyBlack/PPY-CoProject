@@ -10,6 +10,7 @@ Anton
 
 Palina
 - Creating the player: ToDo
+- Creating the camera: ToDo
 - UI: ToDo
 - Graphics: ToDo
 - Magic Setup: ToDo

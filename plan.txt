@@ -9,7 +9,7 @@ Anton
 - Enemy interaction: ToDo
 
 Palina
-- Creating the player: ToDo
+- Creating the player: Done
 - Creating the camera: ToDo
 - UI: ToDo
 - Graphics: ToDo

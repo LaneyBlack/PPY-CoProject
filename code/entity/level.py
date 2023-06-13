@@ -3,6 +3,8 @@ import pygame
 from code.entity.tile import Tile
 from code.entity.player import Player
 from code.settings import *
+from code.debug import debug
+
 
 class Level:
     def __init__(self):
@@ -23,10 +25,15 @@ class Level:
                 y = j * TILE_SIZE
                 # Deciding by the key symbol create a new displayable object and give him a group
                 if key == "x":
-                    Tile((x,y),[self.visible_sprites, self.obstacles_sprites])
+                    Tile((x, y), [self.visible_sprites, self.obstacles_sprites])
                 elif key == "p":
-                    Player((x,y),[self.visible_sprites])
+                    self.player = Player((x, y), [self.visible_sprites],self.obstacles_sprites)
 
     def run(self):
-        # Update and Draw
-        self.visible_sprites.draw(self.display_surface) # draw all visible sprites on screen
+        """
+        Update and draw the game
+        :return:
+        """
+        self.visible_sprites.draw(self.display_surface)  # draw all visible sprites on screen
+        self.visible_sprites.update()  # update all visible sprites on screen
+        debug(self.player.direction)

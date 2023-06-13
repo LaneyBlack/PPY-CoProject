@@ -15,3 +15,6 @@ Palina
 - Graphics: ToDo
 - Magic Setup: ToDo
 - Spells: ToDo
+
+Everyone
+- Find Good Textures: ToDo

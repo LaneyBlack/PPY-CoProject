@@ -1,15 +1,16 @@
 PLAN:
 
 Anton
-- setup
-- Animations
-- Weapons
-- Enemy creating
-- Enemy interaction
+- Setup: Done
+- Level Setup : In Progress
+- Animations: ToDo
+- Weapons: ToDo
+- Enemy creating: ToDo
+- Enemy interaction: ToDo
 
 Palina
-- creating the player
-- UI
-- Graphics
-- Magic Setup
-- Spells
+- Creating the player: ToDo
+- UI: ToDo
+- Graphics: ToDo
+- Magic Setup: ToDo
+- Spells: ToDo

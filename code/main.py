@@ -1,12 +1,12 @@
 import sys, pygame
 from settings import *
-from debug import debug
+from code.entity.level import Level
 
 
 class Game:
     def __init__(self):
         pygame.init()
-        # Initialise Screen size
+        # Screen size
         self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
         # Frame timespans
         self.clock = pygame.time.Clock()
@@ -14,7 +14,8 @@ class Game:
         pygame.display.set_caption(GAME_TITLE)
         # Window Icon
         pygame.display.set_icon(pygame.image.load(GAME_ICON_PATH))
-
+        # Level Creation
+        self.level = Level()
 
     def run(self):
         """
@@ -28,20 +29,20 @@ class Game:
                     pygame.quit()
                     sys.exit()
             self.screen.fill("black")
-            debug("Hello World")
+            self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
-
 
 
 def main():
     """
     This is main method of the project.
     Here the game object is created and runned.
-    :return:
+    :return: None
     """
     game = Game()
     game.run()
+
 
 if __name__ == "__main__":
     main()

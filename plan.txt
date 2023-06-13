@@ -2,7 +2,7 @@ PLAN:
 
 Anton
 - Setup: Done
-- Level Setup : In Progress
+- Level Setup : Done
 - Animations: ToDo
 - Weapons: ToDo
 - Enemy creating: ToDo

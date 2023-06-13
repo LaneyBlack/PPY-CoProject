@@ -1,4 +1,7 @@
 import pygame
+
+from code.entity.tile import Tile
+from code.entity.player import Player
 from code.settings import *
 
 class Level:
@@ -14,9 +17,16 @@ class Level:
 
     def init_map(self):
         for i, row in enumerate(WORLDMAP):
-            for j, col in enumerate(row):
-                print(i,j,row)
+            for j, key in enumerate(row):
+                # Object coordinate is position multiplied by tile-size
+                x = i * TILE_SIZE
+                y = j * TILE_SIZE
+                # Deciding by the key symbol create a new displayable object and give him a group
+                if key == "x":
+                    Tile((x,y),[self.visible_sprites, self.obstacles_sprites])
+                elif key == "p":
+                    Player((x,y),[self.visible_sprites])
 
     def run(self):
         # Update and Draw
-        pass
+        self.visible_sprites.draw(self.display_surface) # draw all visible sprites on screen

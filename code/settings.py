@@ -8,11 +8,18 @@ WIN_HEIGHT = 920  # px
 FPS = 60
 
 # ---===--- Texture paths ---===---
-PLAYER_TEXTURE_PATH = "../img/graphics/hero.png"
-PLAYER_TEXTURE_SIZE = (80, 100)
+PLAYER_TEXTURE_PATH = "../img/graphics/cat.png"
+PLAYER_TEXTURE_SIZE = (62, 62)
 TILE_TEXTURE_PATH = "../img/graphics/rock1.png"
 TILE_TEXTURE_SIZE = (80, 80)
 # ---===--- Map settings ---===---
+FLOOR_TEXTURE_PATH = "../img/map/floor.png"
+FLOOR_TEXTURE_SIZE = (3200, 3200)
+
+FLOOR_BLOCKS_PATH_CSV = "../img/map/map._FloorBlocks.csv"
+
+FLOOR_OBJECTS_PATH = "../img/map/objects"
+FLOOR_OBJECTS_PATH_CSV = "../img/map/map._Objects.csv"
 TILE_SIZE = 64  # px
 # Currently it's 30x20 (WxH). Here in lists 20 columns and 30 rows
 # x - rock, p - player, " " - is empty space

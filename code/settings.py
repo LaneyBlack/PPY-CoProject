@@ -1,6 +1,6 @@
 """There you can find and change all the project settings"""
-# WARING: on Mac it is "../img", on Win it is "img"
-IMAGE_FOLDER_PATH = "img" # ../img on Mac and "img" on Win
+# WARNING: There is two options for image folder 1)"../img" 2) "img"
+IMAGE_FOLDER_PATH = "../img"  # <-------WARNING
 
 # ---===--- Main window settings ---===---
 GAME_TITLE = "Harry Potter : The Adventures"

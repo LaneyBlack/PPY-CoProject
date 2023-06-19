@@ -3,7 +3,9 @@ PLAN:
 Anton
 - Setup: Done
 - Level Setup : Done
+- Login: ToDo
 - Animations: ToDo
+===============Discuss=This===============
 - Weapons: ToDo
 - Enemy creating: ToDo
 - Enemy interaction: ToDo
@@ -11,10 +13,8 @@ Anton
 Palina
 - Creating the player: Done
 - Creating the camera: Done
+- Find Good Textures: Done
 - UI: ToDo
 - Graphics: ToDo
 - Magic Setup: ToDo
 - Spells: ToDo
-
-Everyone
-- Find Good Textures: ToDo

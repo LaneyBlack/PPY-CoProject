@@ -1,9 +1,12 @@
 import sys, pygame
-from settings import *
+
 from code.entity.level import Level
+from code.pages.app_state import AppState
+from code.pages.title import Title
+from settings import *
 
 
-class Game:
+class Window:
     def __init__(self):
         pygame.init()
         # Screen size
@@ -15,7 +18,10 @@ class Game:
         # Window Icon
         pygame.display.set_icon(pygame.image.load(GAME_ICON_PATH))
         # Level Creation
-        self.level = Level()
+        self.app_state = AppState.TITLE_SCREEN
+        # Font
+        self.font = pygame.font.SysFont("arialblack", 20)
+        self.page = Title()
 
     def run(self):
         """
@@ -25,11 +31,15 @@ class Game:
         """
         while True:
             for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_SPACE:
+                        self.page = Level()
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
             self.screen.fill("black")
-            self.level.run()
+            self.page.run()
             pygame.display.update()
             self.clock.tick(FPS)
 
@@ -40,8 +50,8 @@ def main():
     Here the game object is created and runned.
     :return: None
     """
-    game = Game()
-    game.run()
+    window = Window()
+    window.run()
 
 
 if __name__ == "__main__":

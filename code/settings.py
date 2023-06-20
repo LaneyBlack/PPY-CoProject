@@ -9,11 +9,15 @@ WIN_WIDTH = 1640  # px
 WIN_HEIGHT = 920  # px
 FPS = 60
 
+# ---===--- Button Paths ---===---
+BUTTON_IMAGES_PATH = IMAGE_FOLDER_PATH + "/buttons"
+
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"
 PLAYER_TEXTURE_SIZE = (62, 62)
 TILE_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/rock1.png"
 TILE_TEXTURE_SIZE = (80, 80)
+
 # ---===--- Map settings ---===---
 FLOOR_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/map/floor.png"
 FLOOR_TEXTURE_SIZE = (3200, 3200)

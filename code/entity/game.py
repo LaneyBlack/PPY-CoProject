@@ -6,7 +6,7 @@ from code.debug import debug
 from code.support import *
 
 
-class Level:
+class Game:
     def __init__(self):
         # Get Display window (surface)
         self.display_surface = pygame.display.get_surface()

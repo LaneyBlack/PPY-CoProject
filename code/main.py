@@ -1,6 +1,6 @@
 import sys, pygame
 
-from code.entity.level import Level
+from code.entity.game import Game
 from code.pages.app_state import AppState
 from code.pages.title import Title
 from settings import *
@@ -33,7 +33,7 @@ class Window:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
-                        self.page = Level()
+                        self.page = Game()
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()

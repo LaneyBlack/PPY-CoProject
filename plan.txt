@@ -3,17 +3,17 @@ PLAN:
 Anton
 - Setup: Done
 - Level Setup : Done
-- Login: ToDo
-- Animations: ToDo
-===============Discuss=This===============
-- Weapons: ToDo
-- Enemy creating: ToDo
-- Enemy interaction: ToDo
+- Login and Password Logic: ToDo
+- Login and Password UI: ToDo
+- Tools: ToDo
+- Plant creating: ToDo
+- Plant interaction: ToDo
 
 Palina
 - Creating the player: Done
 - Creating the camera: Done
 - Find Good Textures: Done
+- Animations: ToDo
 - UI: ToDo
 - Graphics: ToDo
 - Magic Setup: ToDo

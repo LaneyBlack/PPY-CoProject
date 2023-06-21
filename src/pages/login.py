@@ -1,5 +1,5 @@
 import pygame
-from code.settings import *
+from src.settings import *
 
 
 class Login:

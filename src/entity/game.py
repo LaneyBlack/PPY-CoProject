@@ -1,9 +1,9 @@
 import pygame
 
-from code.entity.tile import Tile
-from code.entity.player import Player
-from code.debug import debug
-from code.support import *
+from src.entity.tile import Tile
+from src.entity.player import Player
+from src.debug import debug
+from src.support import *
 
 
 class Game:

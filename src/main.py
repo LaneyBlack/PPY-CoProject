@@ -1,8 +1,8 @@
 import sys, pygame
 
-from code.entity.game import Game
-from code.pages.app_state import AppState
-from code.pages.title import Title
+from src.entity.game import Game
+from src.pages.app_state import AppState
+from src.pages.title import Title
 from settings import *
 
 

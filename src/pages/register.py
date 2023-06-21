@@ -1,7 +1,7 @@
 import pygame
-from code.settings import *
+from src.settings import *
 
-class Title:
+class Register:
     def __init__(self):
         # Get Display Surface
         self.display_surface = pygame.display.get_surface()
@@ -9,7 +9,7 @@ class Title:
         # Load title
         font = pygame.font.Font(FONT_PATH, 150)
         self.title = font.render(GAME_TITLE, True, "darkblue")
-        self.title_coords = (screen_width/2 - 500,200)
+        self.title_coords = (screen_width/2 - 500,150)
         # Load title image
         # Load buttons
         buttons_width = 800  # px
@@ -31,6 +31,7 @@ class Title:
     def run(self):
         # Get mouse pos
         mouse = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
         self.display_surface.fill("lightblue")
         self.display_surface.blit(self.title, self.title_coords)
         # self.display_surface.blit(pygame.image.load("img/background.jpg"),(0,0))
@@ -38,6 +39,7 @@ class Title:
             if button["edges"][0] <= mouse[0] <= button["edges"][1] and \
                     button["edges"][2] <= mouse[1] <= button["edges"][3]:
                 pygame.draw.rect(self.display_surface, "green", button["coords"], 50)
+
             else:
                 pygame.draw.rect(self.display_surface, "darkgreen", button["coords"], 50)
             self.display_surface.blit(button["text"], button["text-coords"])

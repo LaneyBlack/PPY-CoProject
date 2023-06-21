@@ -1,16 +1,15 @@
 """There you can find and change all the project settings"""
 # WARNING: There is two options for image folder 1)"../img" 2) "img"
-IMAGE_FOLDER_PATH = "../img"  # <-------WARNING
+ASSETS_FOLDER_PATH = "assets"
+IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING
 
 # ---===--- Main window settings ---===---
-GAME_TITLE = "Harry Potter : The Adventures"
+GAME_TITLE = "Cat Farm : Island"
 GAME_ICON_PATH = IMAGE_FOLDER_PATH + "/icon.png"
+FONT_PATH = ASSETS_FOLDER_PATH + "/VT323-Regular.ttf"
 WIN_WIDTH = 1640  # px
 WIN_HEIGHT = 920  # px
 FPS = 60
-
-# ---===--- Button Paths ---===---
-BUTTON_IMAGES_PATH = IMAGE_FOLDER_PATH + "/buttons"
 
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"

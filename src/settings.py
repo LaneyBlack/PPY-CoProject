@@ -11,6 +11,13 @@ WIN_WIDTH = 1640  # px
 WIN_HEIGHT = 920  # px
 FPS = 60
 
+# ---===--- Window Colors ---===---
+BACKGROUND_COLOR = (118,161,87)
+TITLE_COLOR = (233,227,117)
+BUTTON_IDLE_COLOR = (215,158,95)
+BUTTON_ACTIVE_COLOR = (239,186,117)
+BUTTON_TEXT_COLOR = (0,0,0)
+
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"
 PLAYER_TEXTURE_SIZE = (62, 62)

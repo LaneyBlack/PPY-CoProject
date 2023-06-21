@@ -7,4 +7,4 @@ class Login:
         self.display_surface = pygame.display.get_surface()
 
     def run(self):
-        print("title")
+        return self

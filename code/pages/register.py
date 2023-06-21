@@ -7,4 +7,4 @@ class Register:
         pass
 
     def run(self):
-        pass
+        return self

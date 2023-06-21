@@ -26,7 +26,7 @@ class Game:
         graphics = {
             'objects': import_folder(FLOOR_OBJECTS_PATH)
         }
-        #print(graphics['objects'])
+        # print(graphics['objects'])
 
         for ob in graphics['objects']:
             print(ob)
@@ -39,11 +39,11 @@ class Game:
                         x = col_index * TILE_SIZE
                         y = row_index * TILE_SIZE
                         if style == 'boundary':
-                            Tile((x, y),[self.obstacles_sprites], 'invisible')
+                            Tile((x, y), [self.obstacles_sprites], 'invisible')
                         if style == 'object':
                             pass
                             surf = graphics['objects'][int(col)]
-                            Tile((x, y),[self.visible_sprites, self.obstacles_sprites], 'object', surf)
+                            Tile((x, y), [self.visible_sprites, self.obstacles_sprites], 'object', surf)
                 # Deciding by the key symbol create a new displayable object and give him a group
         #         if key == "x":
         #             Tile((x, y), [self.visible_sprites, self.obstacles_sprites])
@@ -59,6 +59,7 @@ class Game:
         self.visible_sprites.custom_draw(self.player)  # draw all visible sprites on screen
         self.visible_sprites.update()  # update all visible sprites on screen
         debug(self.player.direction)
+        return self
 
 
 class YSortCameraGroup(pygame.sprite.Group):

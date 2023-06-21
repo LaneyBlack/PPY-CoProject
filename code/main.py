@@ -20,7 +20,6 @@ class Window:
         # Level Creation
         self.app_state = AppState.TITLE_SCREEN
         # Font
-        self.font = pygame.font.SysFont("arialblack", 20)
         self.page = Title()
 
     def run(self):
@@ -39,7 +38,7 @@ class Window:
                     sys.exit()
 
             self.screen.fill("black")
-            self.page.run()
+            self.page = self.page.run()
             pygame.display.update()
             self.clock.tick(FPS)
 
@@ -47,7 +46,7 @@ class Window:
 def main():
     """
     This is main method of the project.
-    Here the game object is created and runned.
+    Here the game object is created and ran.
     :return: None
     """
     window = Window()

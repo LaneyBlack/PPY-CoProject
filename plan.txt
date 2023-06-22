@@ -3,8 +3,8 @@ PLAN:
 Anton
 - Setup: Done
 - Level Setup : Done
-- Login and Password Logic: ToDo
 - Login and Password UI: ToDo
+- Login and Password Logic: ToDo
 - Tools: ToDo
 - Plant creating: ToDo
 - Plant interaction: ToDo

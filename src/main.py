@@ -1,9 +1,10 @@
-import sys, pygame
+import pygame
+import sys
 
+from settings import *
 from src.entity.game import Game
 from src.pages.app_state import AppState
 from src.pages.title import Title
-from settings import *
 
 
 class Window:

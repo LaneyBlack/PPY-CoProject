@@ -1,20 +1,20 @@
-PLAN:
-
 Anton
 - Setup: Done
 - Level Setup : Done
-- Login and Password UI: ToDo
-- Login and Password Logic: ToDo
-- Tools: ToDo
-- Plant creating: ToDo
-- Plant interaction: ToDo
+- Title page: Done
+- Login and Password UI: Done
+- Login and Password Logic: Done
+- Refactor UI and make separate classes (like button and textbox): ToDo
 
 Palina
 - Creating the player: Done
 - Creating the camera: Done
 - Find Good Textures: Done
-- Animations: ToDo
-- UI: ToDo
-- Graphics: ToDo
-- Magic Setup: ToDo
-- Spells: ToDo
+- Graphics: In Progress
+- Animations: In Progress
+
+----------ToDo:
+- Tools: ToDo
+- Plant creating: ToDo
+- Plant interaction: ToDo
+- Game UI: ToDo

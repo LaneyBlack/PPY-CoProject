@@ -3,8 +3,8 @@
 ASSETS_FOLDER_PATH = "../assets"
 IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING
 
-DB_STRING = "postgresql://s24382:s24382@212.182.24.105:15432/s24382"  # postgres sql
-# DB_STRING = "sqlite:///project.db"  # sqlite
+# DB_STRING = "postgresql://s24382:s24382@212.182.24.105:15432/s24382"  # postgres sql
+DB_STRING = "sqlite:///db/project.db"  # sqlite
 
 # ---===--- Main window settings ---===---
 GAME_TITLE = "Cat Farm : Island"

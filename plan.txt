@@ -18,3 +18,4 @@ Palina
 - Plant creating: ToDo
 - Plant interaction: ToDo
 - Game UI: ToDo
+- Fix Graphics squares: ToDo

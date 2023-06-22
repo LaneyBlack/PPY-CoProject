@@ -26,8 +26,8 @@ TEXBOX_TEXT_COLOR = (0, 0, 0)
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"
 PLAYER_TEXTURE_SIZE = (62, 62)
-TILE_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/rock1.png"
-TILE_TEXTURE_SIZE = (80, 80)
+
+PLAYER_ANIMATIONS_PATH = IMAGE_FOLDER_PATH + "/animations/"
 
 # ---===--- Map settings ---===---
 FLOOR_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/map/floor.png"
@@ -37,6 +37,7 @@ FLOOR_BLOCKS_PATH_CSV = IMAGE_FOLDER_PATH + "/map/map._FloorBlocks.csv"
 
 FLOOR_OBJECTS_PATH = IMAGE_FOLDER_PATH + "/map/objects"
 FLOOR_OBJECTS_PATH_CSV = IMAGE_FOLDER_PATH + "/map/map._Objects.csv"
+
 TILE_SIZE = 64  # px
 
 # ToDo this is not needed for now

@@ -4,6 +4,7 @@ from src.entity.tile import Tile
 from src.entity.player import Player
 from src.debug import debug
 from src.support import *
+from src.entity.watering_can import WateringCan
 
 
 class Game:
@@ -14,6 +15,9 @@ class Game:
         # Sprite Groups
         self.visible_sprites = YSortCameraGroup()
         self.obstacles_sprites = pygame.sprite.Group()
+
+        # WateringCan sprites
+        self.current_watering_can = None
 
         self.init_map()
 
@@ -26,10 +30,7 @@ class Game:
         graphics = {
             'objects': import_folder(FLOOR_OBJECTS_PATH)
         }
-        # print(graphics['objects'])
 
-        for ob in graphics['objects']:
-            print(ob)
 
         for style, layout in layouts.items():
             for row_index, row in enumerate(layout):
@@ -41,7 +42,6 @@ class Game:
                         if style == 'boundary':
                             Tile((x, y), [self.obstacles_sprites], 'invisible')
                         if style == 'object':
-                            pass
                             surf = graphics['objects'][int(col)]
                             Tile((x, y), [self.visible_sprites, self.obstacles_sprites], 'object', surf)
                 # Deciding by the key symbol create a new displayable object and give him a group
@@ -49,7 +49,16 @@ class Game:
         #             Tile((x, y), [self.visible_sprites, self.obstacles_sprites])
         #         elif key == "p":
         #             self.player = Player((x, y), [self.visible_sprites], self.obstacles_sprites)
-        self.player = Player((450, 2200), [self.visible_sprites], self.obstacles_sprites)
+        self.player = Player((450, 2200), [self.visible_sprites], self.obstacles_sprites, self.create_water, self.destroy_watering_can)
+
+    def create_water(self):
+        self.current_watering_can = WateringCan(self.player,[self.visible_sprites])
+
+    def destroy_watering_can(self):
+        if self.current_watering_can:
+            self.current_watering_can.kill()
+        self.current_watering_can = None
+
 
     def run(self):
         """
@@ -58,7 +67,8 @@ class Game:
         """
         self.visible_sprites.custom_draw(self.player)  # draw all visible sprites on screen
         self.visible_sprites.update()  # update all visible sprites on screen
-        debug(self.player.direction)
+        debug(self.player.status)
+        #debug(self.player.direction)
         return self
 
 

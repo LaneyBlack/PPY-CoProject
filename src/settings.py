@@ -2,6 +2,7 @@
 # WARNING: There is two options for image folder 1)"../assets" 2) "assets"
 ASSETS_FOLDER_PATH = "../assets"
 IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING
+DB_PATH = "../src/db/users.db"  # SQL LITE DataBase
 
 # ---===--- Main window settings ---===---
 GAME_TITLE = "Cat Farm : Island"
@@ -20,8 +21,10 @@ BUTTON_IDLE_COLOR = (215, 158, 95)
 BUTTON_ACTIVE_COLOR = (239, 186, 117)
 BUTTON_TEXT_COLOR = (0, 0, 0)
 
-TEXBOX_COLOR = (255, 255, 255)
-TEXBOX_TEXT_COLOR = (0, 0, 0)
+TEXBOX_COLOR = (193, 199, 187)
+TEXBOX_ACTIVE_COLOR = (221, 223, 210)
+TEXBOX_TEXT_COLOR = (129, 139, 133)
+TEXBOX_VALUE_COLOR = (0, 0, 0)
 
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"

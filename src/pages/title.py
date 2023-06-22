@@ -21,17 +21,17 @@ class Title:
         self.buttons = [
             {"coords": [buttons_x, 450, buttons_width, buttons_height],
              "edges": [buttons_x, buttons_x + buttons_width, 450, 450 + buttons_height],
-             "text":"Login",
+             "text": "Login",
              "text-render": font.render("Login", False, BUTTON_TEXT_COLOR),
              "text-coords": (buttons_x + buttons_width / 2.8, 450)},
             {"coords": [buttons_x, 600, buttons_width, buttons_height],
              "edges": [buttons_x, buttons_x + buttons_width, 600, 600 + buttons_height],
-             "text":"Register",
+             "text": "Register",
              "text-render": font.render("Register", False, BUTTON_TEXT_COLOR),
              "text-coords": (buttons_x + buttons_width / 3.4, 600)},
         ]
 
-    def run(self):
+    def run(self, events):
         # Get mouse pos
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
@@ -41,7 +41,7 @@ class Title:
         for button in self.buttons:
             if button["edges"][0] <= mouse[0] <= button["edges"][1] and \
                     button["edges"][2] <= mouse[1] <= button["edges"][3]:
-                pygame.draw.rect(self.display_surface, BUTTON_ACTIVE_COLOR, button["coords"],50)
+                pygame.draw.rect(self.display_surface, BUTTON_ACTIVE_COLOR, button["coords"], 50)
                 if click[0]:
                     if button["text"] == "Login":
                         return Login()

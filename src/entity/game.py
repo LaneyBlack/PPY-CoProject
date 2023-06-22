@@ -15,6 +15,7 @@ class Game:
         self.visible_sprites = YSortCameraGroup()
         self.obstacles_sprites = pygame.sprite.Group()
 
+        self.player = None
         self.init_map()
 
     def init_map(self):
@@ -51,7 +52,7 @@ class Game:
         #             self.player = Player((x, y), [self.visible_sprites], self.obstacles_sprites)
         self.player = Player((450, 2200), [self.visible_sprites], self.obstacles_sprites)
 
-    def run(self):
+    def run(self, events):
         """
         Update and draw the game.
         :return: None

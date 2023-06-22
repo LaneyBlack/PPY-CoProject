@@ -30,7 +30,8 @@ class Window:
         :return: None
         """
         while True:
-            for event in pygame.event.get():
+            events = pygame.event.get()
+            for event in events:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
                         self.page = Game()
@@ -39,7 +40,7 @@ class Window:
                     sys.exit()
 
             self.screen.fill("black")
-            self.page = self.page.run()
+            self.page = self.page.run(events)
             pygame.display.update()
             self.clock.tick(FPS)
 

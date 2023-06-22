@@ -8,5 +8,5 @@ class Login:
         self.display_surface = pygame.display.get_surface()
         screen_width = self.display_surface.get_width()
 
-    def run(self):
+    def run(self,events):
         return self

@@ -11,6 +11,9 @@ class Register:
         # Get Display Surface
         self.display_surface = pygame.display.get_surface()
         screen_width = self.display_surface.get_width()
+        self.error_message = ""
+        self.error_font = pygame.font.Font(FONT_PATH, 40)
+        self.error_message_coords = (100, 100)
         # Init buttons
         my_font = pygame.font.Font(FONT_PATH, 90)
         buttons_width = 800
@@ -87,7 +90,8 @@ class Register:
                             if event.key == pygame.K_BACKSPACE:
                                 text_box["value"] = text_box["value"][:-1]
                             else:
-                                text_box["value"] += event.unicode
+                                if len(text_box["value"]) < 25:
+                                    text_box["value"] += event.unicode
         # Draw every button
         for button in self.buttons:
             # If mouse hovered on button then change it's color
@@ -97,16 +101,25 @@ class Register:
                 # If button was clicked
                 if click[0]:
                     if button["text"] == "Register":
-                        if db_service.get_user(self.text_boxes[0]["value"]):
-                            debug("This login is already occupied!")
+                        # Registration requirements
+                        if len(self.text_boxes[0]["value"]) < 4:
+                            self.error_message = "Login must be at least 4 symbols long!"
+                        elif db_service.get_user(self.text_boxes[0]["value"]):
+                            self.error_message = "This login is already occupied!"
+                        elif len(self.text_boxes[1]["value"]) < 8:
+                            self.error_message = "Password length must be at least 8 symbols long!"
                         elif self.text_boxes[1]["value"] != self.text_boxes[2]["value"]:
-                            debug("Password and password repeat are different!")
+                            self.error_message = "Password and password repeat are different!"
                         else:
                             user = User(self.text_boxes[0]["value"], password_encode(self.text_boxes[1]["value"]))
                             db_service.add(user)
+                            print("User registered successfully")
                             return Game()
             else:
                 pygame.draw.rect(self.display_surface, BUTTON_IDLE_COLOR, button["coords"], 50)
             # Button text putted inside the button
             self.display_surface.blit(button["text-render"], button["text-coords"])
+            # Error message print
+            error_render = self.error_font.render(self.error_message, True, ERROR_MESSAGE_COLOR)
+            self.display_surface.blit(error_render, self.error_message_coords)
         return self

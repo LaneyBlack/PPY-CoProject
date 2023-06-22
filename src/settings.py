@@ -2,7 +2,9 @@
 # WARNING: There is two options for image folder 1)"../assets" 2) "assets"
 ASSETS_FOLDER_PATH = "../assets"
 IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING
-DB_PATH = "../src/db/users.db"  # SQL LITE DataBase
+
+DB_STRING = "postgresql://s24382:s24382@212.182.24.105:15432/s24382"  # postgres sql
+# DB_STRING = "sqlite:///project.db"  # sqlite
 
 # ---===--- Main window settings ---===---
 GAME_TITLE = "Cat Farm : Island"
@@ -25,6 +27,8 @@ TEXBOX_COLOR = (193, 199, 187)
 TEXBOX_ACTIVE_COLOR = (221, 223, 210)
 TEXBOX_TEXT_COLOR = (129, 139, 133)
 TEXBOX_VALUE_COLOR = (0, 0, 0)
+
+ERROR_MESSAGE_COLOR = (160, 50, 50)
 
 # ---===--- Texture paths ---===---
 PLAYER_TEXTURE_PATH = IMAGE_FOLDER_PATH + "/graphics/cat.png"

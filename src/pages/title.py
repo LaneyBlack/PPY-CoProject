@@ -5,7 +5,22 @@ from src.pages.register import Register
 
 
 class Title:
+    """
+    A class that represents the title screen and handles user interface elements for the title screen.
+
+    Attributes:
+        display_surface (pygame.Surface): The surface to display the title screen.
+        title (pygame.Surface): The rendered title text.
+        title_coords (tuple): The coordinates of the title text on the display surface.
+        buttons (list): A list of dictionaries representing the buttons in the title screen.
+
+    Methods:
+        run(events): Runs the title screen and handles user input events.
+    """
     def __init__(self):
+        """
+        Initializes the Title class.
+        """
         # Get Display Surface
         self.display_surface = pygame.display.get_surface()
         screen_width = self.display_surface.get_width()
@@ -32,6 +47,15 @@ class Title:
         ]
 
     def run(self, events):
+        """
+        Runs the title screen and handles user input events.
+
+        Args:
+            events (list): A list of pygame events.
+
+        Returns:
+            Login or Register: An instance of the Login or Register class based on user selection, or self otherwise.
+        """
         # Get mouse pos
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()

@@ -7,7 +7,28 @@ from src.debug import *
 
 
 class Register:
+    """
+    A class that handles the registration process and user interface for registration.
+
+    Attributes:
+        display_surface (pygame.Surface): The display surface to render the UI elements.
+        error_message (str): Error message to display if there are any registration errors.
+        error_font (pygame.font.Font): Font used for rendering the error message.
+        error_message_coords (tuple): Coordinates for rendering the error message.
+        buttons (list): List of dictionaries representing the buttons for registration.
+        text_boxes (list): List of dictionaries representing the text boxes for input.
+        active_text_box_name (str): Name of the currently active text box.
+        text_box_font (pygame.font.Font): Font used for rendering the text box values.
+
+    Methods:
+        run(events): Runs the registration process and handles user input.
+
+    """
+
     def __init__(self):
+        """
+        Initializes the Register class.
+        """
         # Get Display Surface
         self.display_surface = pygame.display.get_surface()
         screen_width = self.display_surface.get_width()
@@ -56,6 +77,16 @@ class Register:
         self.text_box_font = pygame.font.Font(FONT_PATH, 80)
 
     def run(self, events):
+        """
+        Runs the registration process and handles user input.
+
+        Args:
+            events (list): List of pygame events to process.
+
+        Returns:
+            Game: An instance of the Game class if the registration is successful,
+                or self otherwise.
+        """
         # Get mouse pos
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()

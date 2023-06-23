@@ -7,7 +7,7 @@ font = pygame.font.Font(None, DEBUG_FONT_SIZE)
 
 def debug(info, y=10, x=10):
     """
-    Method for showing reports on screen
+    Method for displaying debug information on the screen.
     :param info: string
         Text to show on screen
     :param y: int

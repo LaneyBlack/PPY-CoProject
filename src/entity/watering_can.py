@@ -4,7 +4,15 @@ from src.settings import IMAGE_FOLDER_PATH, PLAYER_TEXTURE_SIZE
 
 
 class WateringCan(pygame.sprite.Sprite):
+    """
+    Represents a watering can object in the game.
+    """
     def __init__(self, player, groups):
+        """
+        Initializes the WateringCan object.
+        :param player: player: The player object associated with the watering can.
+        :param groups: list: The groups to which the watering can sprite belongs.
+        """
         super().__init__(groups)
         direction = player.status.split("_")[0]
         print(direction)

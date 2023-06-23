@@ -1,4 +1,7 @@
-"""There you can find and change all the project settings"""
+"""
+Project Settings
+"""
+
 # WARNING: There is two options for image folder 1)"../assets" 2) "assets"
 ASSETS_FOLDER_PATH = "../assets"
 IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING

@@ -8,7 +8,22 @@ from src.pages.title import Title
 
 
 class Window:
+    """
+    A class that represents the game window and handles the main game loop.
+
+    Attributes:
+        screen (pygame.Surface): The game window surface.
+        clock (pygame.time.Clock): The clock object for controlling the frame rate.
+        app_state (AppState): The current state of the application.
+        page (Title or Game): The current page or game instance.
+
+    Methods:
+        run(): Runs the main game loop.
+    """
     def __init__(self):
+        """
+        Initializes the Window class.
+        """
         pygame.init()
         # Screen size
         self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
@@ -25,7 +40,8 @@ class Window:
 
     def run(self):
         """
-        Repeats every frame
+        Runs the main game loop.
+        Repeats every frame.
         if event type == QUIT, then exit game
         :return: None
         """
@@ -47,8 +63,8 @@ class Window:
 
 def main():
     """
-    This is main method of the project.
-    Here the game object is created and ran.
+    The main method of the project.
+    Creates and runs the game window.
     :return: None
     """
     window = Window()

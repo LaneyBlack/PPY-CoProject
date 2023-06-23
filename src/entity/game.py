@@ -9,6 +9,18 @@ from src.entity.watering_can import WateringCan
 
 class Game:
     def __init__(self):
+        """
+        Represents the game instance.
+
+        The Game class initializes the game, sets up the display surface and creates sprite groups.
+        It also initializes the game map and the player object.
+
+        Attributes:
+            display_surface (pygame.Surface): The game's display surface.
+            visible_sprites (YSortCameraGroup): Sprite group for visible sprites.
+            obstacles_sprites (pygame.sprite.Group): Sprite group for obstacle sprites.
+            player (Player): The player object.
+        """
         # Get Display window (surface)
         self.display_surface = pygame.display.get_surface()
 
@@ -20,6 +32,14 @@ class Game:
         self.init_map()
 
     def init_map(self):
+        """
+        Initializes the game map by loading layouts and graphics.
+
+        The method loads layout data from CSV files and graphics data from folders.
+        It iterates over the layout and creates tiles and objects based on the values in the layout.
+
+        :return:
+        """
         layouts = {
             'boundary': import_csv_layout(FLOOR_BLOCKS_PATH_CSV),
             'object': import_csv_layout(FLOOR_OBJECTS_PATH_CSV),
@@ -50,9 +70,21 @@ class Game:
         self.player = Player((450, 2200), [self.visible_sprites], self.obstacles_sprites, self.create_water, self.destroy_watering_can)
 
     def create_water(self):
+        """
+        Creates a watering can object.
+        Creates a watering can object and adds it to the visible sprites group.
+
+        :return:
+        """
         self.current_watering_can = WateringCan(self.player,[self.visible_sprites])
 
     def destroy_watering_can(self):
+        """
+        Destroys the current watering can object.
+        Removes the current watering can object from the visible sprites group.
+
+        :return:
+        """
         if self.current_watering_can:
             self.current_watering_can.kill()
         self.current_watering_can = None
@@ -60,17 +92,34 @@ class Game:
 
     def run(self, events):
         """
-        Update and draw the game.
-        :return: None
+        Updates and draws the game.
+
+        This method is called in the game loop to update and draw the game state.
+        It updates the visible sprites, handles player status and direction, and returns the updated game instance.
+
+        :param events:list: list of pygame window events
+        :return: self: The updated game instance.
         """
         self.visible_sprites.custom_draw(self.player)  # draw all visible sprites on screen
         self.visible_sprites.update()  # update all visible sprites on screen
-        debug(self.player.status)
-        #debug(self.player.direction)
         return self
 
 
 class YSortCameraGroup(pygame.sprite.Group):
+    """
+    Represents a custom sprite group for camera offset.
+
+    The YSortCameraGroup class extends the pygame.sprite.Group class to provide
+    additional functionality for camera offset. It also handles drawing the floor.
+
+    Attributes:
+        display_surface (pygame.Surface): The game's display surface.
+        half_width (int): Half the width of the display surface.
+        half_height (int): Half the height of the display surface.
+        offset (pygame.math.Vector2): The camera offset vector.
+        floor_surf (pygame.Surface): The floor surface.
+        floor_rect (pygame.Rect): The floor rectangle.
+    """
     def __init__(self):
         super().__init__()
         self.display_surface = pygame.display.get_surface()
@@ -85,7 +134,12 @@ class YSortCameraGroup(pygame.sprite.Group):
 
     def custom_draw(self, player):
         """
-        Method for drawing sprites on the screen with camera offset.
+        Draws sprites on the screen with camera offset.
+
+        This method is responsible for drawing the sprites on the screen with camera offset.
+        It calculates the offset based on the player's position and draws the sprites accordingly.
+        It also draws the floor surface.
+
         :param player: Object representing the player,
             whose position will be used to calculate the offset.
         :return: None

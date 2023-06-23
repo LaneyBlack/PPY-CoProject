@@ -7,7 +7,27 @@ from src.debug import *
 
 
 class Login:
+    """
+    A class that represents a login process and handles user interface elements for login
+
+    Attributes:
+        display_surface (pygame.Surface): The surface to display the login UI.
+        error_message (str): The error message to be displayed if there are any login errors.
+        error_font (pygame.font.Font): The font used for rendering the error message.
+        error_message_coords (tuple): The coordinates of the error message on the display surface.
+        buttons (list): A list of dictionaries representing the buttons in the UI.
+        text_boxes (list): A list of dictionaries representing the text boxes in the UI.
+        active_text_box_name (str): The name of the currently active text box.
+        text_box_font (pygame.font.Font): The font used for rendering the text box values.
+
+    Methods:
+        run(events): Runs the login process and handles user input events.
+
+    """
     def __init__(self):
+        """
+            Initializes the Login class.
+        """
         # Get Display Surface
         self.display_surface = pygame.display.get_surface()
         screen_width = self.display_surface.get_width()
@@ -50,6 +70,16 @@ class Login:
         self.text_box_font = pygame.font.Font(FONT_PATH, 80)
 
     def run(self, events):
+        """
+        Runs the login process and handles user input events.
+
+        Args:
+            events (list): A list of pygame events.
+
+        Returns:
+            Game: An instance of the Game class if the login is successful,
+                or self otherwise.
+        """
         # Get mouse pos
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()

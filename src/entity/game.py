@@ -16,10 +16,10 @@ class Game:
         It also initializes the game map and the player object.
 
         Attributes:
-            display_surface (pygame.Surface): The game's display surface.
-            visible_sprites (YSortCameraGroup): Sprite group for visible sprites.
-            obstacles_sprites (pygame.sprite.Group): Sprite group for obstacle sprites.
-            player (Player): The player object.
+        :param:display_surface :pygame.Surface: The game's display surface.
+        :param:visible_sprites :YSortCameraGroup: Sprite group for visible sprites.
+        :param:obstacles_sprites :pygame.sprite.Group: Sprite group for obstacle sprites.
+        :param:player :Player: The player object.
         """
         # Get Display window (surface)
         self.display_surface = pygame.display.get_surface()

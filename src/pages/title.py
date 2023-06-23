@@ -27,7 +27,7 @@ class Title:
         # Load title
         font = pygame.font.Font(FONT_PATH, 150)
         self.title = font.render(GAME_TITLE, True, TITLE_COLOR)
-        self.title_coords = (screen_width / 2 - 500, 150)
+        self.title_coords = (screen_width / 2 - 425, 150)
         # Load buttons
         buttons_width = 800  # px
         buttons_height = 100  # px

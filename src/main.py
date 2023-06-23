@@ -3,7 +3,6 @@ import sys
 
 from settings import *
 from src.entity.game import Game
-from src.pages.app_state import AppState
 from src.pages.title import Title
 
 
@@ -33,9 +32,6 @@ class Window:
         pygame.display.set_caption(GAME_TITLE)
         # Window Icon
         pygame.display.set_icon(pygame.image.load(GAME_ICON_PATH))
-        # Level Creation
-        self.app_state = AppState.TITLE_SCREEN
-        # Font
         self.page = Title()
 
     def run(self):

@@ -10,7 +10,7 @@ IMAGE_FOLDER_PATH = ASSETS_FOLDER_PATH + "/img"  # <-------WARNING
 DB_STRING = "sqlite:///db/project.db"  # sqlite
 
 # ---===--- Main window settings ---===---
-GAME_TITLE = "Cat Farm : Island"
+GAME_TITLE = "Happy Cat Farm"
 GAME_ICON_PATH = IMAGE_FOLDER_PATH + "/icon.png"
 FONT_PATH = ASSETS_FOLDER_PATH + "/VT323-Regular.ttf"
 WIN_WIDTH = 1640  # px

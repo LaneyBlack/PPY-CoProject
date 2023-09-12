@@ -16,10 +16,11 @@ The game was written in pygame.
    ![image](https://github.com/LaneyBlack/PPY-CoProject/assets/44290162/7fab948f-ec17-4b08-bfaf-a8423fd455b5)
    
 4) Character has a standing animation which is directed into last moved side of the screen:
+   
   ![image](https://github.com/LaneyBlack/PPY-CoProject/assets/44290162/cf493d0e-3e4f-4794-94c4-10fdc94eabe3)
   ![image](https://github.com/LaneyBlack/PPY-CoProject/assets/44290162/b3f50644-3728-4cd1-85fd-3cb54f3e588c)
 
-5) Character has movement animation:
+6) Character has movement animation:
 
   ![image](https://github.com/LaneyBlack/PPY-CoProject/assets/44290162/bdae09ac-8454-4aba-a694-7507d0d7e806)
   ![image](https://github.com/LaneyBlack/PPY-CoProject/assets/44290162/90a2792b-d33a-47ec-994d-7ddfc8692d1e)
